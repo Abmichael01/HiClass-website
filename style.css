@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+body{  
+    background: black;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 9%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100000000;
+}
+
+.logo h1{
+    color: orange;
+    font-size: 35px;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+}
+
+ul a{
+    font-size: 20px;
+    color: rgb(238, 228, 228);
+    padding: 0px 10px;
+    transition: color 0.7s;
+    cursor: pointer;
+}
+
+ul a:hover{
+    color: orange;    
+}
+
+.active{
+    border-left: 2px solid orange;
+}
+
+.menu{
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    
+}
+
+.info{
+    color: white;
+}
+
+.info h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.info p{
+    font-size: 50px;
+    color: orange;
+}
+
+.info small{
+    font-size: 25px;
+    
+}
+
+.info strong{
+    display: block;
+    margin-top: 20px;
+    color: orange;
+}
+
+form{
+    margin-top: 10px;
+}
+
+form input{
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    width: 70%;
+    outline: none;
+}
+
+form button{
+    display: block;
+    margin-top: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(to right, orange, orangered);
+    transition: background 1s;
+}
+
+form button:hover{
+    background: linear-gradient(to right, orangered, orange);
+}
+
+.image{
+    width: 80%;
+    height: 55%;
+    background-image: url(airpod.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+
+.image:hover{
+    opacity: 0.5;
+}
+
+
+
+
+
+.productsSection{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.productsSection h2{
+    font-size: 30px;
+    color: orange;
+    margin-bottom: 40px;
+    
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 80%;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 40px;
+    position: relative;
+    background-color: black;
+    box-shadow: 0px 4px 10px rgba(68, 59, 44, 0.722);
+    border-radius: 30px;
+    transition: transform 1s;
+}
+
+.category:hover{
+    transform: scale(1.1);
+    z-index: 20;
+}
+
+.category p{
+    z-index: 10;
+    font-size: 20px;
+}
+
+.category::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;;                 
+    left: 0px;;
+    bottom: 0px;
+    background: linear-gradient(yellow ,orange, orangered);
+    border-radius: 30px;
+}
+
+.category::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: black;
+    border-radius: 30px;
+    
+}
+
+
+
+@keyframes rotate2 {
+    0%{
+        background: linear-gradient(yellow ,orange, orangered);
+    }
+
+    100%{
+        background: linear-gradient( orangered ,orange, yellow);
+    }
+}
+
+
+
+
+
+
+
+.aboutSection{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.notes p{
+    font-size: 20px;
+    color: orange;
+    max-width: 60%;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(68, 59, 44, 0.722);
+}
+
+.card::before{
+    content: '';
+    width: 50%;
+    height: 140%;
+    background: linear-gradient(orange, orangered);
+    position: absolute;
+    top: -20%;
+    right: 25%;
+    animation: rotate 4s linear infinite;
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: black;
+    border-radius: 16px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.card-note{
+    z-index: 10;
+    max-width: 85%;
+    text-align: center;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.contactSection{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.contactSection h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.contactSection p{
+    font-size: 20px;
+    color: orange;
+}
+
+.contactSection form{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .image{
+        width: 55%;
+        height: 55%;
+    }
+
+    .info{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .image{
+        width: 90%;
+        height: 55%;
+        margin-bottom: 60px;
+        background-size: contain;
+    }
+
+    .info{
+        width: 90%;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 90px 0px;
+
+    }
+
+    .aboutSection{
+        margin: 90px 0px;
+    }
+
+    .productsSection{
+        margin: 90px 0px; 
+    }
+
+    h2{
+        text-align: center;
+        width: 80%;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .categories{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image{
+        width: 100%;
+        height: 70%;
+        margin-bottom: 60px;
+        background-size: contain;
+    }
+
+    .info{
+        width: 100%;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 90px;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .image{
+        width: 100%;
+        height: 70%;
+        margin-bottom: 60px;
+        background-size: contain;
+    }
+    
+    header{
+        align-items: flex-start;
+    }
+    ul{
+        display: none;
+        align-self: flex-start;
+    }
+
+    ul a:hover{
+        color: black;   
+    }
+
+    .menu{
+        display: inline-block;
+    }
+
+    .menu-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        width: 300px;
+        height: 400px;
+        background-color: orange;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        font-size: 30px;
+    }
+}
